@@ -1,20 +1,68 @@
-<h1>Meteorologist</h1>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-offset-1 col-sm-10">
+        <h1>Meteorologist</h1>
+        <p>Here's the outlook for <%= @street_address %>:</p>
+        </div>
+    </div>
 
-<p>Here's the outlook for <%= @street_address %>:</p>
+    <div class="row">
+        <div class="col-sm-offset-1 col-sm-5">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">Current Temperature</h3>
+            </div>
+            <div class="panel-body">
+              <%= @current_temperature %>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-5">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">Current Summary</h3>
+            </div>
+            <div class="panel-body">
+              <%= @current_summary %>
+            </div>
+          </div>
+        </div>
+    </div>
 
-<dl>
-  <dt>Current Temperature</dt>
-  <dd><%= @current_temperature %></dd>
-
-  <dt>Current Summary</dt>
-  <dd><%= @current_summary %></dd>
-
-  <dt>Outlook for next sixty minutes</dt>
-  <dd><%= @summary_of_next_sixty_minutes %></dd>
-
-  <dt>Outlook for next several hours</dt>
-  <dd><%= @summary_of_next_several_hours %></dd>
-
-  <dt>Outlook for next several days</dt>
-  <dd><%= @summary_of_next_several_days %></dd>
-</dl>
+    <div class="row">
+        <div class="col-sm-offset-1 col-sm-10">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">Outlook for next sixty minutes</h3>
+          </div>
+          <div class="panel-body">
+            <%= @summary_of_next_sixty_minutes %>
+          </div>
+        </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-offset-1 col-sm-10">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">Outlook for next several hours</h3>
+          </div>
+          <div class="panel-body">
+            <%= @summary_of_next_several_hours %>
+          </div>
+        </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-offset-1 col-sm-10">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">Outlook for next several days</h3>
+          </div>
+          <div class="panel-body">
+            <%= @summary_of_next_several_days %>
+          </div>
+        </div>
+        </div>
+    </div>
+</div>

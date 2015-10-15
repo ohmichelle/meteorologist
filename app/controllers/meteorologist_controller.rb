@@ -23,15 +23,15 @@ class MeteorologistController < ApplicationController
     geo_url = geo_root_url + "#{url_safe_street_address}"
     geo_parsed_data = JSON.parse(open(geo_url).read)
 
-    @latitude = geo_parsed_data["results"][0]["geometry"]["location"]["lat"]
+    lat = geo_parsed_data["results"][0]["geometry"]["location"]["lat"]
 
-    @longitude = geo_parsed_data["results"][0]["geometry"]["location"]["lng"]
+    lng = geo_parsed_data["results"][0]["geometry"]["location"]["lng"]
 
     forecast_root_url = "https://api.forecast.io/forecast/" #Dark Sky Forecast API
 
     forecast_api_key = "b28e5f6d98fdb3a90e04b3b22dd49fe4" #personal Forecast API key, user:michelle.oh@chicagobooth.edu
 
-    forecast_url = forecast_root_url + forecast_api_key + "/#{@latitude},#{@longitude}"
+    forecast_url = forecast_root_url + forecast_api_key + "/#{lat},#{lng}"
 
     forecast_parsed_data = JSON.parse(open(forecast_url).read)
 

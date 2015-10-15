@@ -1,24 +1,90 @@
-<h1>Coords &rarr; Weather Results</h1>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-offset-1 col-sm-10">
+        <h1>Coords &rarr; Weather Results</h1>
+        </div>
+    </div>
 
-<dl>
-  <dt>Latitude</dt>
-  <dd><%= @lat %></dd>
+    <div class="row">
+        <div class="col-sm-offset-1 col-sm-5">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">Latitude</h3>
+            </div>
+            <div class="panel-body">
+              <%= @lat %>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-5">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">Longitude</h3>
+            </div>
+            <div class="panel-body">
+              <%= @lng %>
+            </div>
+          </div>
+        </div>
+    </div>
 
-  <dt>Longitude</dt>
-  <dd><%= @lng %></dd>
+    <div class="row">
+        <div class="col-sm-offset-1 col-sm-5">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">Current Temperature</h3>
+            </div>
+            <div class="panel-body">
+              <%= @current_temperature %>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-5">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">Current Summary</h3>
+            </div>
+            <div class="panel-body">
+              <%= @current_summary %>
+            </div>
+          </div>
+        </div>
+    </div>
 
-  <dt>Current Temperature</dt>
-  <dd><%= @current_temperature %></dd>
-
-  <dt>Current Summary</dt>
-  <dd><%= @current_summary %></dd>
-
-  <dt>Outlook for next sixty minutes</dt>
-  <dd><%= @summary_of_next_sixty_minutes %></dd>
-
-  <dt>Outlook for next several hours</dt>
-  <dd><%= @summary_of_next_several_hours %></dd>
-
-  <dt>Outlook for next several days</dt>
-  <dd><%= @summary_of_next_several_days %></dd>
-</dl>
+    <div class="row">
+        <div class="col-sm-offset-1 col-sm-10">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">Outlook for next sixty minutes</h3>
+          </div>
+          <div class="panel-body">
+            <%= @summary_of_next_sixty_minutes %>
+          </div>
+        </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-offset-1 col-sm-10">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">Outlook for next several hours</h3>
+          </div>
+          <div class="panel-body">
+            <%= @summary_of_next_several_hours %>
+          </div>
+        </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-offset-1 col-sm-10">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">Outlook for next several days</h3>
+          </div>
+          <div class="panel-body">
+            <%= @summary_of_next_several_days %>
+          </div>
+        </div>
+        </div>
+    </div>
+</div>

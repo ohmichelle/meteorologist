@@ -1,12 +1,43 @@
-<h1>Street &rarr; Coords Results</h1>
-
-<dl>
-  <dt>Street Address</dt>
-  <dd><%= @street_address %></dd>
-
-  <dt>Latitude</dt>
-  <dd><%= @latitude %></dd>
-
-  <dt>Longitude</dt>
-  <dd><%= @longitude %></dd>
-</dl>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-offset-1 col-sm-10">
+        <h1>Street &rarr; Coords Results</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-offset-1 col-sm-10">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">Street Address</h3>
+          </div>
+          <div class="panel-body">
+            <%= @street_address %>
+          </div>
+        </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-offset-1 col-sm-10">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">Latitude</h3>
+          </div>
+          <div class="panel-body">
+            <%= @latitude %>
+          </div>
+        </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-offset-1 col-sm-10">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">Longitude</h3>
+          </div>
+          <div class="panel-body">
+            <%= @longitude %>
+          </div>
+        </div>
+        </div>
+    </div>
+</div>
